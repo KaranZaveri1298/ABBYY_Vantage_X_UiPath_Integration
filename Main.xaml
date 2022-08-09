@@ -1,0 +1,143 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="612.666666666667,1421.33333333333" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:auva="clr-namespace:Abbyy.UiPath.Vantage.Activities;assembly=Abbyy.UiPath.Vantage.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="31">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>Abbyy.UiPath.Vantage.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="30">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>Abbyy.UiPath.Vantage.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.HashCode</AssemblyReference>
+      <AssemblyReference>Theraot.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ABBYYVANTAGE" sap:VirtualizedContainerService.HintSize="376,1356.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:Dictionary(x:String, si:Stream)" Name="ResultFiles" />
+      <Variable x:TypeArguments="x:String" Default="https://vantage-us.abbyy.com" Name="ServerURL" />
+      <Variable x:TypeArguments="x:String" Default="karan.zaveri@accelirate.com" Name="UserName" />
+      <Variable x:TypeArguments="x:String" Default="Pallavi@12" Name="Password" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <auva:VantageScopeActivity ProxyPassword="{x:Null}" ProxySecurePassword="{x:Null}" ProxyServerUrl="{x:Null}" ProxyUserName="{x:Null}" SecurePassword="{x:Null}" Tenant="{x:Null}" DisplayName="Vantage Scope" EnableProxy="False" sap:VirtualizedContainerService.HintSize="334,1264.66666666667" sap2010:WorkflowViewState.IdRef="VantageScopeActivity_1" Password="[Password]" ServerUrl="[ServerURL]" UserName="[UserName]">
+      <auva:VantageScopeActivity.Child>
+        <ActivityAction x:TypeArguments="auva:VantageActivityContext">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="auva:VantageActivityContext" Name="VantageActivityContextArgumentName" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="271.333333333333,906.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="s:Guid" Name="TranID" />
+              <Variable x:TypeArguments="auva:TransactionStatus" Name="TranStatus" />
+              <Variable x:TypeArguments="x:String" Name="ReviewLink" />
+              <Variable x:TypeArguments="x:String" Name="ExtractedData" />
+              <Variable x:TypeArguments="x:String" Name="InvoiceTotal" />
+              <Variable x:TypeArguments="x:String" Name="Invoice_No" />
+              <Variable x:TypeArguments="x:String" Name="Invoice_date" />
+              <Variable x:TypeArguments="x:String" Name="Ship_to" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <auva:UseSkillActivity DisplayName="Use Skill" FileName="Invoice1" sap:VirtualizedContainerService.HintSize="229.333333333333,90" sap2010:WorkflowViewState.IdRef="UseSkillActivity_1" InputStream="[System.IO.File.OpenRead(&quot;C:\Users\KaranZaveri\Documents\UiPath\ABBYYVantage\Invoices\USOil3.pdf&quot;)]" SkillName="Vantage_Workshop" TransactionId="[TranID]" />
+            <auva:GetResultsActivity ClassName="{x:Null}" ClassificationConfidences="{x:Null}" IsClassificationConfident="{x:Null}" ResultFiles="{x:Null}" DisplayName="Get Results" ExtractedData="[ExtractedData]" sap:VirtualizedContainerService.HintSize="229.333333333333,88.6666666666667" sap2010:WorkflowViewState.IdRef="GetResultsActivity_1" TransactionId="[TranID]" TransactionStatus="[TranStatus]" VerificationUrl="[ReviewLink]" />
+            <ui:InterruptibleWhile Condition="[TranStatus.ToString=&quot;Processing&quot;]" DisplayName="While" sap:VirtualizedContainerService.HintSize="229.333333333333,52.6666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+              <ui:InterruptibleWhile.Body>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="242,239.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                  <auva:GetResultsActivity ClassName="{x:Null}" ClassificationConfidences="{x:Null}" IsClassificationConfident="{x:Null}" ResultFiles="{x:Null}" DisplayName="Get Results" ExtractedData="[ExtractedData]" sap:VirtualizedContainerService.HintSize="200,85.3333333333333" sap2010:WorkflowViewState.IdRef="GetResultsActivity_2" TransactionId="[TranID]" TransactionStatus="[TranStatus]" VerificationUrl="[ReviewLink]" />
+                </Sequence>
+              </ui:InterruptibleWhile.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:InterruptibleWhile>
+            <auva:MapFieldsActivity DisplayName="Map Fields" ExtractedData="[ExtractedData]" FieldsMappingCache="[{&quot;Name&quot;:&quot;Vantage_Workshop&quot;,&quot;State&quot;:null,&quot;Children&quot;:[{&quot;Name&quot;:&quot;InvoiceTotal&quot;,&quot;State&quot;:{&quot;HasMapping&quot;:true,&quot;DefaultName&quot;:&quot;InvoiceTotal&quot;,&quot;DefaultType&quot;:&quot;String&quot;,&quot;Name&quot;:&quot;InvoiceTotal&quot;,&quot;Type&quot;:&quot;String&quot;},&quot;Children&quot;:null},{&quot;Name&quot;:&quot;Invoice_No&quot;,&quot;State&quot;:{&quot;HasMapping&quot;:true,&quot;DefaultName&quot;:&quot;Invoice_No&quot;,&quot;DefaultType&quot;:&quot;String&quot;,&quot;Name&quot;:&quot;Invoice_No&quot;,&quot;Type&quot;:&quot;String&quot;},&quot;Children&quot;:null},{&quot;Name&quot;:&quot;Invoice_date&quot;,&quot;State&quot;:{&quot;HasMapping&quot;:true,&quot;DefaultName&quot;:&quot;Invoice_date&quot;,&quot;DefaultType&quot;:&quot;String&quot;,&quot;Name&quot;:&quot;Invoice_date&quot;,&quot;Type&quot;:&quot;String&quot;},&quot;Children&quot;:null},{&quot;Name&quot;:&quot;Ship_to&quot;,&quot;State&quot;:{&quot;HasMapping&quot;:true,&quot;DefaultName&quot;:&quot;Ship_to&quot;,&quot;DefaultType&quot;:&quot;String&quot;,&quot;Name&quot;:&quot;Ship_to&quot;,&quot;Type&quot;:&quot;String&quot;},&quot;Children&quot;:null}]}]" sap:VirtualizedContainerService.HintSize="229.333333333333,52.6666666666667" sap2010:WorkflowViewState.IdRef="MapFieldsActivity_1" Map="[new Dictionary(Of String, String) from {{&quot;Vantage_Workshop::InvoiceTotal&quot;, &quot;InvoiceTotal&quot;},{&quot;Vantage_Workshop::Invoice_No&quot;, &quot;Invoice_No&quot;},{&quot;Vantage_Workshop::Invoice_date&quot;, &quot;Invoice_date&quot;},{&quot;Vantage_Workshop::Ship_to&quot;, &quot;Ship_to&quot;}}]" SkillName="Vantage_Workshop" Template="Vantage_Workshop">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </auva:MapFieldsActivity>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.333333333333,62.6666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[Invoice_No]" />
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.333333333333,62.6666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[Invoice_date]" />
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.333333333333,62.6666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[InvoiceTotal]" />
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.333333333333,62.6666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[Ship_to]" />
+          </Sequence>
+        </ActivityAction>
+      </auva:VantageScopeActivity.Child>
+    </auva:VantageScopeActivity>
+  </Sequence>
+</Activity>
